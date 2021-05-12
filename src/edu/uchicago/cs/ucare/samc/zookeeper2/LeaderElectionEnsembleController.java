@@ -68,13 +68,13 @@ public class LeaderElectionEnsembleController extends WorkloadDriver {
     	    FileWriter fstream = new FileWriter(zk_dir + "/conf/zoo" + id + ".cfg.dynamic", false);
     	    out = new BufferedWriter(fstream);
     	    if(id == 0){
-    	    	out.write("server.0=localhost:12011:12012:participant;12013\nserver.1=localhost:12014:12015:participant;12016");
+    	    	out.write("server.0=localhost:12001:12002:participant;12003\nserver.1=localhost:12004:12005:participant;12006");
     	    }
     	    if(id == 1){
-    	    	out.write("server.0=localhost:12011:12012:participant;12013\nserver.1=localhost:12014:12015:participant;12016");
+    	    	out.write("server.0=localhost:12001:12002:participant;12003\nserver.1=localhost:12004:12005:participant;12006");
     	    }
     	    if(id == 2){
-    	    	out.write("server.0=localhost:12011:12012:participant;12013\nserver.1=localhost:12014:12015:participant;12016\nserver.2=localhost:12017:12018:participant;12019");
+    	    	out.write("server.0=localhost:12001:12002:participant;12003\nserver.1=localhost:12004:12005:participant;12006\nserver.2=localhost:12007:12008:participant;12009");
     	    }
     	    out.close();
     	}
