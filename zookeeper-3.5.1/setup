@@ -45,7 +45,7 @@ while [ $i -lt $num_node ]; do
   mkdir -p $working_dir/log/zk$i
 	mkdir -p $working_dir/config/zk$i/data
 	echo $i > $working_dir/config/zk$i/data/myid
-	clientPort=`expr 12001 + $i`
+	clientPort=`expr 12003 + $i * 3`
 	sed "s:\$nodeId:$i:g" $scriptdir/config/zoo.cfg | sed "s:\$clientPort:$clientPort:g" > $working_dir/config/zk$i/zoo.cfg
 	i=`expr $i + 1`
 done
